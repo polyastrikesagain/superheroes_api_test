@@ -23,7 +23,7 @@ def tallest_of_filtered(gender: str, is_employed: bool, superheroes_json: list[d
         for hero in superheroes_json:
             if hero['appearance']['gender'] == gender and ((hero['work']['occupation'] != '-' and is_employed)
                     or (hero['work']['occupation'] == '-' and (not is_employed))):
-                if hero_height:=float(hero['appearance']['height'][1].split()[0]) > max_height:
+                if (hero_height:=float(hero['appearance']['height'][1].split()[0])) > max_height:
                     max_height = hero_height
                     hero_of_max_height = hero
 
