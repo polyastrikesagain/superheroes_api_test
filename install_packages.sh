@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "hi! i'm gonna ask your password to install python and pip and then install all the libraries that are missing"
   if command -v apt &> /dev/null;
 then sudo apt install python3 python3-pip
